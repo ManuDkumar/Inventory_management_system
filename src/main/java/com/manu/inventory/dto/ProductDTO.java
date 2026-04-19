@@ -1,10 +1,24 @@
 package com.manu.inventory.dto;
 
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Positive;
+
 public class ProductDTO {
 	private Long id;
+	
+	@NotBlank(message = "Name is Required")
 	private String name;
+	
 	private String description;
+	
+	@NotNull(message = "Price is Required")
+	@Positive(message = "The price must be greater than 0")
 	private double price;
+	
+	@NotNull(message = "Quantity is Required")
+	@Min(message = "Quantity cannot be negative", value = 0)
 	private int quantity;
 	
 	
