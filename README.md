@@ -31,7 +31,7 @@ Backend service built with Spring Boot to manage products and inventory through 
 
 ## Sample Request
 
-POST /products
+**POST /products**
 
 ```json
 {
