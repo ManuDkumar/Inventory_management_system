@@ -38,22 +38,22 @@ POST /products
   "quantity": 10
 }
 
-How to Run
+## How to Run
 
-Clone the repository
-Configure PostgreSQL in application.properties
-Build and run the application
-Test endpoints using Postman
-
-
-Future Enhancements
-
-Input validation
-Exception handling
-Authentication and authorization
-Deployment
+- Clone the repository
+- Configure PostgreSQL in application.properties
+- Build and run the application
+- Test endpoints using Postman
 
 
-Author
+## Future Enhancements
+
+- Input validation
+- Exception handling
+- Authentication and authorization
+- Deployment
+
+
+## Author
 
 Manu Kumar H N
