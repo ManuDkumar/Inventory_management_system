@@ -57,7 +57,7 @@ Example response:
   "message": "Product not found with id: 999",
   "status": 404
 }
-
+```
 
 ## How to Run
 
@@ -72,7 +72,7 @@ Example response:
 
 * Authentication and authorization
 * Deployment
-
+```
 
 ## Author
 
