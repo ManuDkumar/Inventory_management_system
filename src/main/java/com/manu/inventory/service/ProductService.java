@@ -2,6 +2,7 @@ package com.manu.inventory.service;
 
 import com.manu.inventory.dto.ProductDTO;
 import com.manu.inventory.entity.Product;
+import com.manu.inventory.exception.ProductNotFoundException;
 import com.manu.inventory.repository.ProductRepository;
 import org.springframework.stereotype.Service;
 
@@ -31,14 +32,14 @@ public class ProductService {
 
     public ProductDTO getProductById(Long id) {
         Product product = productRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Product not found"));
+                .orElseThrow(() -> new ProductNotFoundException("Product not found with id: " + id));
         return mapToDTO(product);
     }
 
     public ProductDTO updateProduct(Long id, ProductDTO dto) {
 
         Product product = productRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Product not found"));
+        		.orElseThrow(() -> new ProductNotFoundException("Product not found with id: " + id));
 
         product.setName(dto.getName());
         product.setDescription(dto.getDescription());
