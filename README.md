@@ -2,63 +2,123 @@
 
 
 
-\## Description
+\## Overview
 
-A Spring Boot backend application to manage products and inventory using REST APIs.
+
+
+Backend service built with Spring Boot to manage products and inventory through RESTful APIs. The application follows a layered architecture and supports full CRUD operations.
 
 
 
 \## Tech Stack
 
-\- Java
 
-\- Spring Boot
 
-\- PostgreSQL
+\* Java
 
-\- Spring Data JPA
+\* Spring Boot
+
+\* Spring Data JPA
+
+\* PostgreSQL
+
+\* Maven
 
 
 
 \## Features
 
-\- Add product
 
-\- Get all products
 
-\- Get product by ID
+\* Create, read, update, and delete products
 
-\- Update product
+\* Structured backend using Controller–Service–Repository layers
 
-\- Delete product
+\* Persistent storage with PostgreSQL
+
+\* API testing using Postman
 
 
 
 \## API Endpoints
 
-\- POST /products
-
-\- GET /products
-
-\- GET /products/{id}
-
-\- PUT /products/{id}
-
-\- DELETE /products/{id}
 
 
+| Method | Endpoint       | Description            |
 
-\## Tools Used
+| ------ | -------------- | ---------------------- |
 
-\- Postman for API testing
+| POST   | /products      | Create product         |
+
+| GET    | /products      | Retrieve all products  |
+
+| GET    | /products/{id} | Retrieve product by ID |
+
+| PUT    | /products/{id} | Update product         |
+
+| DELETE | /products/{id} | Delete product         |
+
+
+
+\## Sample Request
+
+
+
+POST /products
+
+
+
+```json
+
+{
+
+&#x20; "name": "Laptop",
+
+&#x20; "description": "Gaming laptop",
+
+&#x20; "price": 75000,
+
+&#x20; "quantity": 10
+
+}
+
+```
 
 
 
 \## How to Run
 
+
+
 1\. Clone the repository
 
-2\. Configure PostgreSQL in application.properties
+2\. Configure PostgreSQL in `application.properties`
 
-3\. Run the Spring Boot application
+3\. Build and run the application
+
+4\. Test endpoints using Postman
+
+
+
+\## Future Enhancements
+
+
+
+\* Input validation
+
+\* Exception handling
+
+\* Authentication and authorization
+
+\* Deployment
+
+
+
+\## Author
+
+
+
+Manu Kumar H N
+
+
 
